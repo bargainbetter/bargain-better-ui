@@ -1,3 +1,7 @@
 module.exports.index = function (req, res) {
-    res.render('index', {"title":"nodejs starter"});
-}
+    res.render('index');
+};
+
+module.exports.learn = function register(req, res) {
+  res.render('learn');
+};
