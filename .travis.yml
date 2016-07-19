@@ -8,7 +8,7 @@ node_js:
   - "5"
 
 before_install:
-  - docker build -t bargainbetter/bargain-better-ui .
-  - docker run -p 9002:8080 -d bargainbetter/bargain-better-ui
+  - docker build -t chrisjstevenson/bargain-better-ui .
+  - docker run -p 9002:8080 -d chrisjstevenson/bargain-better-ui
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker push bargainbetter/bargain-better-ui
+  - docker push chrisjstevenson/bargain-better-ui
