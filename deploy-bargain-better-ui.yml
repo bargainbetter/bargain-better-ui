@@ -9,7 +9,7 @@
     - name: application container
       docker:
         name: bargain-better-ui
-        image: chrisjstevenson/bargain-better-ui
+        image: bargainbetter/bargain-better-ui
         state: reloaded
         pull: always
         restart_policy: always
