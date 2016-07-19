@@ -1,7 +1,8 @@
-# bargain better core
+#nodejs-ldap 
+- - - 
+Look at config/env/development for ODSEE(LDAP) connection settings.  Demo uses ldapjs to create a client and bind to ODSEE.  Anonymous binds are not allowed, but you can bind using any NA credentials.  The demo returns what user information is available for your user id.  
 
-Login - Auth
-Profile
-Transact
-Landing Page
-
+#Getting Started
+- - - 
+    npm install
+    node app

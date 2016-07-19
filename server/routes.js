@@ -1,14 +1,7 @@
-var profileController = require('./controllers/profileController');
-var authController = require('./controllers/authController');
+var viewController = require('./controllers/viewController');
+var loginController = require('./controllers/loginController');
 
 module.exports = function (app) {
-
-    app.get('/', function(req, res) {
-        res.redirect('/oauth/linkedin');
-    });
-
-    app.get('/profile', profileController.me);
-    app.get('/oauth/linkedin', authController.authorize);
-    app.get('/oauth/linkedin/callback', authController.authorizationCallback);
-};
-
+    app.get('/', viewController.index);
+    app.post('/api/login', loginController.login);
+}
