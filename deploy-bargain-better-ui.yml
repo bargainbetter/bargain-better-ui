@@ -1,0 +1,17 @@
+---
+  - name: deploy docker application container
+    hosts: dockerhost
+    sudo: true
+    tasks:
+    - name: Install docker-py as a workaround for Ansible issue
+      pip: name=docker-py version=1.2.3
+
+    - name: application container
+      docker:
+        name: bargain-better-ui
+        image: chrisjstevenson/bargain-better-ui
+        state: reloaded
+        pull: always
+        restart_policy: always
+        ports:
+          - "8080:8080"
