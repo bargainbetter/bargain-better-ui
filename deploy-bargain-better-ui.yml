@@ -13,4 +13,4 @@
         state: reloaded
         pull: always
         restart: always
-        publish: 9002:9002
+        publish: 8080:8080
