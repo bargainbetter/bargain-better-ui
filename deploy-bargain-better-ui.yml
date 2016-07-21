@@ -12,5 +12,6 @@
         image: chrisjstevenson/bargain-better-ui
         state: reloaded
         pull: always
-        restart: always
-        publish: 8080:8080
+        restart_policy: always
+        ports:
+          - "9002:9002"
