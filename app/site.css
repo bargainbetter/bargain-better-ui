@@ -14,6 +14,21 @@ a:hover {
     border: .05rem solid #67e1ee;
 }
 
+.btn-linkedin {
+    width:292px;
+    height:40px;
+    border:0;
+    background:url(sign-in-small-default.png) no-repeat;
+}
+
+.btn-linkedin:hover {
+    background:url(sign-in-small-hover.png) no-repeat;
+}
+
+.btn-linkedin:active {
+    background:url(sign-in-small-active.png) no-repeat;
+}
+
 html,
 body {
     height: 100%;
