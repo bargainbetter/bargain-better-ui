@@ -18,15 +18,15 @@ a:hover {
     width:292px;
     height:40px;
     border:0;
-    background:url(sign-in-small-default.png) no-repeat;
+    background:url('./images/sign-in-small-default.png') no-repeat;
 }
 
 .btn-linkedin:hover {
-    background:url(sign-in-small-hover.png) no-repeat;
+    background:url('./images/sign-in-small-hover.png') no-repeat;
 }
 
 .btn-linkedin:active {
-    background:url(sign-in-small-active.png) no-repeat;
+    background:url('./images/sign-in-small-active.png') no-repeat;
 }
 
 
@@ -35,7 +35,7 @@ a:hover {
 html,
 body {
     height: 100%;
-    background: url(background.jpg) no-repeat center fixed; /* credit: http://startupstockphotos.com/ */
+    background: url('./images/background.jpg') no-repeat center fixed; /* credit: http://startupstockphotos.com/ */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

@@ -7,7 +7,7 @@ language: node_js
 node_js:
   - "5"
 
-before_install:
+after_sucess:
   - docker build -t chrisjstevenson/bargain-better-ui .
   - docker run -p 9002:9002 -d chrisjstevenson/bargain-better-ui
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
