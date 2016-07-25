@@ -14,6 +14,27 @@ a:hover {
     border: .05rem solid #67e1ee;
 }
 
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    line-height: 21px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    line-height: 21px;
+    font-weight: 300;
+    color: #333;
+}
+
 .btn-linkedin {
     width:292px;
     height:40px;
@@ -35,16 +56,50 @@ a:hover {
 html,
 body {
     height: 100%;
+    color: #fff;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+.regular {
+    color: rgba(0,0,0,.5);
+    text-shadow: none;
+}
+
+input {
+    border-radius: 5px;
+    width: 70%;
+    height: 45px;
+    border: 1px solid #aaa;
+    padding-left: 20px;
+}
+
+.field {
+    margin-top: 13px;
+}
+
+.or {
+    margin-top:22px;
+    margin-bottom:22px;
+}
+
+.label {
+    position: absolute;
+    left: 14px;
+    z-index: 1;
+    color: #666;
+    cursor: text;
+}
+
+.coverpage
+{
+    height: 100%;
     background: url('./images/background.jpg') no-repeat center fixed; /* credit: http://startupstockphotos.com/ */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-body {
-    color: #fff;
-    text-align: center;
-    text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
 .site-wrapper {
@@ -53,7 +108,7 @@ body {
     height: 100%; /* For at least Firefox */
     min-height: 100%;
     -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-    box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+    box-shadow: inset 0 0 5rem rgba(0,0,0,1);
 }
 .site-wrapper-inner {
     display: table-cell;
@@ -167,4 +222,23 @@ body {
 }
 .navbar-wrapper .navbar .container {
     width: auto;
+}
+
+.customGrid {
+    width: 40%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+    margin: 0 auto;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.groupOfFields {
+    padding-top: 24px;
+    padding-bottom: 24px;
 }

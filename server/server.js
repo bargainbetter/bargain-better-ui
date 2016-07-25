@@ -8,8 +8,9 @@ const chalk = require('chalk');
 const ip = require('ip');
 const divider = chalk.gray('\n-----------------------------------');
 
-
 module.exports.run = function (cb) {
+
+    console.log('server - Starting "' + config.environment + '"');
 
     return app.listenAsync(9002)
         .then(console.log(`Server started ${chalk.green('✓')}`))

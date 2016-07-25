@@ -1,34 +1,35 @@
-
 <% include header %>
 
-<body>
+<body class="coverpage" ng-controller="mainController">
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
 
-<div class="site-wrapper">
-  <div class="site-wrapper-inner">
-
-      <div class="masthead clearfix">
-          <div class="inner">
-              <h3 class="masthead-brand">BarginBetter</h3>
-              <nav>
-                  <ul class="nav masthead-nav">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">About</a></li>
-                      <li><a href="#">Newsletter</a></li>
-                  </ul>
-              </nav>
-          </div>
-      </div>
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">BarginBetter</h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
 
 
-      <div class="inner cover">
-        <h1 class="cover-heading">Plug in your network. with trust.</h1>
-        <p class="lead">Bargain Better unites buyers with sellers using social connections.</p>
-        <p class="lead">
-            <button type="button" class="btn-linkedin" ng-click="login()"></button>
-        </p>
-      </div>
-  </div>
-</div>
+            <div class="inner cover">
+                <h1 class="cover-heading">Plug in your network. with trust.</h1>
+                <p class="lead">Bargain Better unites buyers with sellers using social connections.</p>
+                <p class="lead">
+                    <button type="submit" class="btn btn-info btn-l register" ng-click="login()">Sign up for free</button>
+                </p>
 
+            </div>
+        </div>
+    </div>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/app/app.js"></script>
 </body>
 </html>

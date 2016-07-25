@@ -1,6 +1,6 @@
 var config = module.exports;
 
-config.environment = 'development';
+config.environment = 'production';
 
 config.express = {
     hostName: 'localhost',
@@ -8,4 +8,4 @@ config.express = {
     ip: '127.0.0.1'
 };
 
-config.callBackUrl = 'http://localhost:9002/oauth/linkedin/callback';
+config.callBackUrl = 'http://bargainbetter.com/oauth/linkedin/callback';
