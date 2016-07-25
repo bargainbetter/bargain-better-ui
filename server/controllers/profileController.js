@@ -1,6 +1,7 @@
 var linkedInService = require('../services/linkedInService');
 
 module.exports.index = function me(req, res) {
+
     linkedInService.getProfile(req.query.t)
         .then((result) => {
             console.log(result); // or do something else

@@ -5,13 +5,11 @@ a:hover {
     text-decoration: none;
 }
 
-.btn-awesome,
-.btn-awesome:hover,
-.btn-awesome:focus {
+.btn-awesome {
     color: #fff;
     text-shadow: none;
-    background-color: #67e1ee;
-    border: .05rem solid #67e1ee;
+    border-radius: 50px;
+    font-size: 20px;
 }
 
 h2 {
@@ -36,20 +34,23 @@ h4 {
 }
 
 .btn-linkedin {
-    width:292px;
-    height:40px;
-    border:0;
-    background:url('./images/sign-in-small-default.png') no-repeat;
+    width: 202px;
 }
 
-.btn-linkedin:hover {
-    background:url('./images/sign-in-small-hover.png') no-repeat;
+.btn-register {
+    width: 202px;
+}
+.btn-register:hover {
+    color: #aaa
 }
 
-.btn-linkedin:active {
-    background:url('./images/sign-in-small-active.png') no-repeat;
+.col-centered {
+    margin: 0 auto;
 }
 
+.register-seperator {
+    margin-bottom: 0;
+}
 
 /* Structure */
 
@@ -60,9 +61,10 @@ body {
     background-color: rgba(0,0,0,.5);
     text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.regular {
+.regular-text {
     color: rgba(0,0,0,.5);
     text-shadow: none;
 }
@@ -189,7 +191,7 @@ input {
     .masthead,
     .mastfoot,
     .cover-container {
-        width: 60%; /* Must be percentage or pixels for horizontal alignment */
+        width: 90%; /* Must be percentage or pixels for horizontal alignment */
     }
 }
 
@@ -225,7 +227,8 @@ input {
 }
 
 .customGrid {
-    width: 40%;
+    padding: 20px;
+    width: 50%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;

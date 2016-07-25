@@ -2,8 +2,9 @@ window.app = angular.module('myApp', []);
 
 app.controller('mainController', function($scope, $http) {
 
-    $scope.login = function () {
-        window.location.href = '/oauth/linkedin';
+    $scope.goToRegister = function () {
+        window.location.hrf = '/profile'
+        //window.location.href = '/oauth/linkedin';
     };
 
 
