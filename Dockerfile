@@ -1,5 +1,8 @@
 FROM node:argon
 
+#temporary workaround for prod deploys
+ENV NODE_ENV=prod-test
+
 # Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
