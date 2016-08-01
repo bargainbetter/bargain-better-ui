@@ -1,13 +1,34 @@
 var linkedInService = require('../services/linkedInService');
+var mailService = require('../services/mailService');
+
+var request = require('request');
 
 module.exports.index = function me(req, res) {
 
     linkedInService.getProfile(req.query.t)
-        .then((result) => {
-            console.log(result); // or do something else
+        .then(basicProfile => {
 
-            res.render("profile", result); // actually return a template saying you're registered
-        });
+            // create the subscriber object
+            subscriber = {
+                "email_address": basicProfile.emailAddress,
+                "status": "subscribed",
+                "merge_fields": {
+                    "FNAME": basicProfile.firstName,
+                    "LNAME": basicProfile.lastName
+                }
+            };
+
+            // right now we don't care about the response, just check if there is an error.
+            return mailService.subscribe(subscriber)
+                .then(subscriptionResponse => {
+                    log.info(subscriptionResponse);
+                    return subscriptionResponse;
+                })
+                .catch(err => {
+                    log.error(err);
+                });
+        })
+        .then(subscriptionResponse => res.render("profile", subscriptionResponse));
 };
 
 

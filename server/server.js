@@ -1,6 +1,7 @@
 global.log = require('../config/log');
 var Promise = global.Promise = require('bluebird');
 var app = Promise.promisifyAll(require('./express'));
+Promise.promisifyAll(require('request'));
 global.Linkedin = require('node-linkedin')('78m6kmzfd6yoqf', 'lqfcxRk3d4Jpz3dN');
 
 var config = require('../config/config');
