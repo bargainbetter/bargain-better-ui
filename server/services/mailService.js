@@ -2,6 +2,7 @@ var request = require('request');
 var _ = require('lodash');
 
 var options = {
+    strictSSL: false,
     headers: {
         Authorization: 'apikey f12cb36f352b9e8ff9c7399b2c3fb2c9-us13'
     }

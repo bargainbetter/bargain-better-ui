@@ -3,9 +3,10 @@ var Promise = global.Promise = require('bluebird');
 Promise.promisifyAll(require('request'));
 var mailService = require('../../server/services/mailService');
 
-describe('mailchimpService:', function() {
+describe('mailService >', function() {
 
-    describe('lists', function () {
+    describe('lists >', function () {
+
         it('should return all subscriber lists', function (done) {
             mailService.lists()
                 .then(function (result) {
@@ -15,7 +16,8 @@ describe('mailchimpService:', function() {
         });
     });
 
-    describe('subscribe', function () {
+    describe('subscribe >', function () {
+
        it('should subscribe an email to a list', function (done) {
 
            var subscriber = {
@@ -29,22 +31,21 @@ describe('mailchimpService:', function() {
 
            mailService.subscribe(subscriber)
             .then(function (result) {
-                console.log(result);
+                //console.log(result);
                 expect(result.status).toBe(400);
                 done();
            });
        });
     });
 
-    describe('getAllSubscribers', function () {
-        it('should get all members of a list', function (done) {
+    describe('getAllSubscribers >', function () {
 
+        it('should get all members of a list', function (done) {
             mailService.getAllSubscribers()
                 .then(function (result) {
-                    console.log(result);
+                    //console.log(result);
                     done();
                 });
         });
     });
-
 });

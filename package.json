@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "test": "mocha tests/*"
+    "test": "npm run unit-tests-server",
+    "unit-tests-server": "node node_modules/mocha/bin/mocha \"server/**/*.spec.js\""
+  },
+  "devDependencies": {
+    "mocha": "^3.0.1"
   },
   "dependencies": {
     "angular": "^1.4.9",
