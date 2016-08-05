@@ -3,9 +3,12 @@ var mailService = require('../services/mailService');
 
 var request = require('request');
 
-module.exports.index = function me(req, res) {
+module.exports.index = function index(req, res) {
+    res.render('profile', { token: req.query.t });
+};
 
-    linkedInService.getProfile(req.query.t)
+module.exports.register = function register(req, res) {
+    linkedInService.getProfile(req.params.token)
         .then(basicProfile => {
 
             // create the subscriber object
@@ -28,8 +31,8 @@ module.exports.index = function me(req, res) {
                     log.error(err);
                 });
         })
-        .then(subscriptionResponse => res.render("profile", subscriptionResponse));
-};
+        .then(subscriptionResponse => res.render("profile-li", subscriptionResponse));
+}
 
 
 var staticProfile = { emailAddress: 'chris.j.stevenson@gmail.com',
